@@ -32,6 +32,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'klen/python-mode'
 
 call vundle#end()
 filetype plugin indent on
@@ -41,3 +42,10 @@ filetype plugin indent on
 " NERDTree settings
 " ***********************************************************************************************
 let g:nerdtree_tabs_open_on_console_startup=1
+
+" ***********************************************************************************************
+" Python-mode settings
+" ***********************************************************************************************
+let g:pymode_lint=1
+let g:pymode_lint_checker="pyflakes.pep8"
+let g:pymode_syntax=1
