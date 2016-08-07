@@ -10,11 +10,11 @@ set expandtab
 set shiftwidth=4
 set cursorline
 set showmatch
-let python_highlight_all = 1
+let python_highlight_all=1
 
 " Remove extra spaces.
 highlight BadWhitespace ctermbg=red guibg=darkred
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.css,*.html match BadWhitespace /\s\+$/
 
 " ************************************************************************************************
 " Vundle setting
