@@ -33,6 +33,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'klen/python-mode'
+Plugin 'gregsexton/MatchTag'
+Plugin 'tomtom/tcomment_vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -49,5 +51,18 @@ let NERDTreeShowHidden=1
 " Python-mode settings
 " ***********************************************************************************************
 let g:pymode_lint=1
-let g:pymode_lint_checker="pyflakes.pep8"
+let g:pymode_lint_checker="pyflakes,pep8"
 let g:pymode_syntax=1
+
+
+" ***********************************************************************************************
+" Syntastic settings
+" ***********************************************************************************************
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=1
